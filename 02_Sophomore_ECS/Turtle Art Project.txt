@@ -1,0 +1,339 @@
+speed(0)
+bgcolor("light blue")
+penup()
+goto(-200,-100)
+pendown()
+
+#grass
+begin_fill()
+color("green")
+for i in range(2):
+    forward(400)
+    right(90)
+    forward(100)
+    right(90)
+end_fill()
+
+#mount1
+begin_fill()
+color("gray")
+right(60)
+circle(100,360,3)
+end_fill()
+goto(-113,50)
+begin_fill()
+color("white")
+forward(50)
+setheading(-180)
+right(30)
+forward(20)
+left(45)
+forward(20)
+right(45)
+forward(10)
+right(90)
+forward(40)
+end_fill()
+
+
+
+#mount2
+setheading(0)
+color("dark gray")
+penup()
+goto(-125,-99)
+pendown()
+begin_fill()
+right(60)
+circle(120,360,3)
+end_fill()
+goto(-20.5,80)
+begin_fill()
+color("white")
+forward(50)
+setheading(-180)
+right(30)
+forward(20)
+left(45)
+forward(20)
+right(45)
+forward(10)
+right(90)
+forward(40)
+end_fill()
+
+#mount3
+setheading(0)
+color("gray")
+penup()
+goto(-15,-99)
+pendown()
+begin_fill()
+right(60)
+circle(110,360,3)
+end_fill()
+
+goto(80,67)
+begin_fill()
+color("white")
+forward(50)
+setheading(-180)
+right(30)
+forward(20)
+left(45)
+forward(20)
+right(45)
+forward(10)
+right(90)
+forward(40)
+end_fill()
+
+
+#sun
+penup()
+color("yellow")
+goto(-120,140)
+pendown()
+begin_fill()
+circle(100)
+end_fill()
+
+#glasses
+penup()
+color("black")
+goto(-195,170)
+setheading(270)
+pendown()
+begin_fill()
+circle(15,180)
+setheading(0)
+forward(15)
+setheading(270)
+circle(15,180)
+setheading(180)
+pensize(5)
+forward(75)
+end_fill()
+
+#smile
+penup()
+goto(-155,125)
+pendown()
+pensize(4)
+for i in range(10):
+    right(3)
+    forward(3)
+
+
+#sun ray1
+penup()
+goto(-110,180)
+color("orange")
+setheading(0)
+right(15)
+forward(10)
+pendown()
+begin_fill()
+for i in range(4):
+    forward(30)
+    right(90)
+    forward(5)
+    right(90)
+end_fill()
+
+#sun ray2
+penup()
+goto(-130,130)
+color("orange")
+setheading(0)
+right(40)
+forward(10)
+pendown()
+begin_fill()
+for i in range(4):
+    forward(30)
+    right(90)
+    forward(5)
+    right(90)
+end_fill()
+
+#sun ray3
+penup()
+goto(-175,100)
+color("orange")
+setheading(0)
+right(70)
+forward(10)
+pendown()
+begin_fill()
+for i in range(4):
+    forward(30)
+    right(90)
+    forward(5)
+    right(90)
+end_fill()
+
+
+
+#cloud1
+penup()
+goto(-15,145)
+color("white")
+pensize(40)
+pendown()
+setheading(0)
+forward(50)
+backward(25)
+setheading(90)
+forward(20)
+
+
+#bird1
+penup()
+pensize(3)
+color("black")
+goto(-75,105)
+setheading(0)
+pendown()
+forward(3)
+right(-5)
+forward(3)
+for i in range(10):
+    right(3)
+    forward(2)
+
+forward(5)
+right(5)
+forward(3)
+left(90)
+
+for i in range(10):
+    right(5)
+    forward(3)
+
+#bird2
+penup()
+pensize(3)
+color("black")
+goto(-130,80)
+setheading(0)
+pendown()
+forward(3)
+right(20)
+forward(3)
+for i in range(10):
+    right(3)
+    forward(2)
+
+forward(5)
+right(5)
+forward(3)
+left(90)
+
+for i in range(10):
+    right(5)
+    forward(3)
+
+#cloud2
+penup()
+color("white")
+goto(100,115)
+pensize(40)
+pendown()
+setheading(0)
+forward(50)
+backward(25)
+setheading(90)
+forward(20)
+
+   
+#bird3
+penup()
+pensize(3)
+color("black")
+goto(5,100)
+setheading(0)
+pendown()
+forward(3)
+right(10)
+forward(3)
+for i in range(10):
+    right(3)
+    forward(2)
+
+forward(5)
+right(5)
+forward(3)
+left(90)
+
+for i in range(10):
+    right(5)
+    forward(3)
+
+penup()
+
+#bird4
+pensize(3)
+color("black")
+goto(120,70)
+setheading(0)
+pendown()
+forward(3)
+right(20)
+forward(3)
+for i in range(10):
+    right(3)
+    forward(2)
+
+forward(5)
+right(5)
+forward(3)
+left(90)
+
+for i in range(10):
+    right(5)
+    forward(3)
+    
+penup()
+
+#tree1
+pensize(15)
+goto(-126,-150)
+setheading(90)
+pendown()
+color("black")
+right(90)
+forward(15)
+backward(15)
+left(90)
+color("brown")
+forward(50)
+color("yellow green")
+setheading(0)
+begin_fill()
+circle(-10)
+end_fill()
+penup()
+
+#tree2
+pensize(15)
+goto(70,-160)
+setheading(90)
+pendown()
+color("black")
+right(90)
+forward(15)
+backward(15)
+left(90)
+color("brown")
+forward(50)
+color("yellow green")
+setheading(0)
+begin_fill()
+circle(-10)
+end_fill()
+
+#disappear
+penup()
+goto(-200,200)
+color("yellow")

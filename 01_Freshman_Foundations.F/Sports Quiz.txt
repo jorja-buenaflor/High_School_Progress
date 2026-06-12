@@ -1,0 +1,74 @@
+def quiz():
+    print("Welcome to our Sports Quiz!")
+    score=0
+    answer=input("How many people need to be on a baseball field?").lower()
+    if answer=="9":
+        print("Correct!")
+        score+=1
+    else:
+        print("Wrong! the answer was 9.")
+    print()
+    answer=input("What part of a football field do you score a touchdown in?").lower()
+    if answer=="endzone":
+        print("Correct!")
+        score+=1
+    else:
+        print("Wrong! The answer was endzone.")
+    print()
+    answer=input("If you make a layup in basketball, how many points is it?").lower()
+    if answer=="2":
+        print("Correct!")
+        score+=1
+    else:
+        print("Wrong! The answer was 2.")
+    print()
+    answer=input("What color is a basketball?").lower()
+    if answer=="orange":
+        print("Correct!")
+        score+=1
+    else:
+        print("Wrong! The answer was orange.")
+    print()
+    answer=input("What do you use to hit a softball?").lower()
+    if answer=="bat":
+        print("Correct!")
+        score+=1
+    else:
+        print("Wrong! The answer was bat.")
+    print()
+    answer=input("How many hits can you get in volleyball?")
+    if answer=="3":
+        print("Correct!")
+        score+=1
+    else:
+        print("Wrong! The answer was 3.")
+    print()
+    answer=input("How long is a marathon?(in miles)").lower()
+    if answer=="26":
+        print("Correct!")
+        score+=1
+    else:
+        print("Wrong! The answer was 26.")
+    print()
+    answer=input("What is the name of the flat disc you hit in hockey?").lower()
+    if answer=="puck":
+        print("Correct!")
+        score+=1
+    else:
+        print("Wrong! The answer was puck.")
+    print()
+    answer=input("How many bases are on a baseball field?").lower()
+    if answer=="4":
+        print("Correct!")
+        score+=1
+    else:
+        print("Wrong! The answer was 4.")
+    print()
+    answer=input("What do you pull to stop a play in flag football?").lower()
+    if answer=="flag":
+        print("Correct!")
+        score+=1
+    else:
+        print("Wrong! The answer was flag.")
+    print("Your final score was",score,"/10.")
+quiz()

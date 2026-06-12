@@ -1,0 +1,19 @@
+lbs=int(input("Enter weight in pounds: "))
+ft=int(input("Enter height in feet (ex. 5'6, put 5): "))
+inch=int(input("Enter remaining inches (ex. 5'6, put 6): "))
+
+height=(ft*12)+inch
+
+bmi=(lbs/(height**2))*703
+bmi=round(bmi,2)
+print
+print("The BMI is, "+str(bmi))
+
+if 18.4<bmi<25.0:
+    print("Healthy BMI")
+elif 24.9<bmi<29.9:
+    print("You are over weight.")
+elif bmi>30:
+    print("You are obese.")
+else:
+    print("You are under weight.")

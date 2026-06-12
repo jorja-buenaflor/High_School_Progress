@@ -1,0 +1,434 @@
+import turtle
+import time
+speed(0)
+
+hr=turtle.Turtle()
+hr.pensize(3)
+mint=turtle.Turtle()
+mint.pensize(2)
+sec=turtle.Turtle()
+tm_write=turtle.Turtle()
+#backround
+bgcolor("light blue")
+penup()
+goto(-200,-100)
+pendown()
+
+#grass
+begin_fill()
+color("green")
+for i in range(2):
+    forward(400)
+    right(90)
+    forward(100)
+    right(90)
+end_fill()
+
+#mount1
+begin_fill()
+color("gray")
+right(60)
+circle(100,360,3)
+end_fill()
+goto(-113,50)
+begin_fill()
+color("white")
+forward(50)
+setheading(-180)
+right(30)
+forward(20)
+left(45)
+forward(20)
+right(45)
+forward(10)
+right(90)
+forward(40)
+end_fill()
+
+
+
+#mount2
+setheading(0)
+color("dark gray")
+penup()
+goto(-125,-99)
+pendown()
+begin_fill()
+right(60)
+circle(120,360,3)
+end_fill()
+goto(-20.5,80)
+begin_fill()
+color("white")
+forward(50)
+setheading(-180)
+right(30)
+forward(20)
+left(45)
+forward(20)
+right(45)
+forward(10)
+right(90)
+forward(40)
+end_fill()
+
+#mount3
+setheading(0)
+color("gray")
+penup()
+goto(-15,-99)
+pendown()
+begin_fill()
+right(60)
+circle(110,360,3)
+end_fill()
+
+goto(80,67)
+begin_fill()
+color("white")
+forward(50)
+setheading(-180)
+right(30)
+forward(20)
+left(45)
+forward(20)
+right(45)
+forward(10)
+right(90)
+forward(40)
+end_fill()
+
+
+#sun
+penup()
+color("yellow")
+goto(-120,140)
+pendown()
+begin_fill()
+circle(100)
+end_fill()
+
+#glasses
+penup()
+color("black")
+goto(-195,170)
+setheading(270)
+pendown()
+begin_fill()
+circle(15,180)
+setheading(0)
+forward(15)
+setheading(270)
+circle(15,180)
+setheading(180)
+pensize(5)
+forward(75)
+end_fill()
+
+#smile
+penup()
+goto(-155,125)
+pendown()
+pensize(4)
+for i in range(10):
+    right(3)
+    forward(3)
+
+
+#sun ray1
+penup()
+goto(-110,180)
+color("orange")
+setheading(0)
+right(15)
+forward(10)
+pendown()
+begin_fill()
+for i in range(4):
+    forward(30)
+    right(90)
+    forward(5)
+    right(90)
+end_fill()
+
+#sun ray2
+penup()
+goto(-130,130)
+color("orange")
+setheading(0)
+right(40)
+forward(10)
+pendown()
+begin_fill()
+for i in range(4):
+    forward(30)
+    right(90)
+    forward(5)
+    right(90)
+end_fill()
+
+#sun ray3
+penup()
+goto(-175,100)
+color("orange")
+setheading(0)
+right(70)
+forward(10)
+pendown()
+begin_fill()
+for i in range(4):
+    forward(30)
+    right(90)
+    forward(5)
+    right(90)
+end_fill()
+
+
+
+#cloud1
+penup()
+goto(-15,145)
+color("white")
+pensize(40)
+pendown()
+setheading(0)
+forward(50)
+backward(25)
+setheading(90)
+forward(20)
+
+
+#bird1
+penup()
+pensize(3)
+color("black")
+goto(-75,105)
+setheading(0)
+pendown()
+forward(3)
+right(-5)
+forward(3)
+for i in range(10):
+    right(3)
+    forward(2)
+
+forward(5)
+right(5)
+forward(3)
+left(90)
+
+for i in range(10):
+    right(5)
+    forward(3)
+
+#bird2
+penup()
+pensize(3)
+color("black")
+goto(-130,80)
+setheading(0)
+pendown()
+forward(3)
+right(20)
+forward(3)
+for i in range(10):
+    right(3)
+    forward(2)
+
+forward(5)
+right(5)
+forward(3)
+left(90)
+
+for i in range(10):
+    right(5)
+    forward(3)
+
+#cloud2
+penup()
+color("white")
+goto(100,115)
+pensize(40)
+pendown()
+setheading(0)
+forward(50)
+backward(25)
+setheading(90)
+forward(20)
+
+   
+#bird3
+penup()
+pensize(3)
+color("black")
+goto(5,100)
+setheading(0)
+pendown()
+forward(3)
+right(10)
+forward(3)
+for i in range(10):
+    right(3)
+    forward(2)
+
+forward(5)
+right(5)
+forward(3)
+left(90)
+
+for i in range(10):
+    right(5)
+    forward(3)
+
+penup()
+
+#bird4
+pensize(3)
+color("black")
+goto(120,70)
+setheading(0)
+pendown()
+forward(3)
+right(20)
+forward(3)
+for i in range(10):
+    right(3)
+    forward(2)
+
+forward(5)
+right(5)
+forward(3)
+left(90)
+
+for i in range(10):
+    right(5)
+    forward(3)
+    
+penup()
+
+#tree1
+pensize(15)
+goto(-126,-150)
+setheading(90)
+pendown()
+color("black")
+right(90)
+forward(15)
+backward(15)
+left(90)
+color("brown")
+forward(50)
+color("yellow green")
+setheading(0)
+begin_fill()
+circle(-10)
+end_fill()
+penup()
+
+#tree2
+pensize(15)
+goto(70,-160)
+setheading(90)
+pendown()
+color("black")
+right(90)
+forward(15)
+backward(15)
+left(90)
+color("brown")
+forward(50)
+color("yellow green")
+setheading(0)
+begin_fill()
+circle(-10)
+end_fill()
+
+#disappear
+penup()
+goto(-200,200)
+color("yellow")
+
+def draw_face(): 
+    tracer(0)
+    pu()
+    goto(0,-132)
+    color("white")
+    pd()
+    begin_fill()
+    circle(133)
+    end_fill()
+    pu()
+    color("navy")
+    goto(0,-140)
+    pd()
+    pensize(12)
+    circle(140)
+    pu()
+    goto(0,0)
+    color("black")
+    pensize(3)
+    for i in range(12):
+        pu()
+        forward(100)
+        pd()
+        forward(30)
+        pu()
+        backward(130)
+        left(30)
+    pu()
+    goto(210,210)
+    tracer(1)
+hour=0
+def draw_hour(): 
+    hr.color("blue")
+    current=time.localtime()
+    global hour
+    hour=current[3]
+    hr.tracer(0)
+    hr.seth(90)
+    hr.right(hour*30.0)
+    hr.forward(70)
+    hr.backward(70)
+    hr.tracer(1)
+    
+def draw_minute():
+    mint.color("red")
+    current=time.localtime()
+    global minutes
+    minutes=current[4]
+    mint.tracer(0)
+    mint.seth(90)
+    mint.right(minutes*6)
+    mint.forward(90)
+    mint.backward(90)
+    mint.tracer(1)
+    
+def draw_second():
+    sec.color("yellow")
+    current=time.localtime()
+    global second
+    second=current[5]
+    sec.tracer(0)
+    sec.seth(90)
+    sec.right(second*6)
+    sec.forward(90)
+    sec.backward(90)
+    sec.tracer(1)
+    
+#draw face
+draw_face()
+
+tm_write.speed(0)
+tm_write.pu()
+tm_write.goto(0,-175)
+
+while True:
+    draw_hour()
+    draw_minute()
+    draw_second()
+    tm_write.write(str(hour)+":"+str(minutes)+":"+str(second),font=("Arial",20),align="center")
+    time.sleep(1)
+    hr.clear()
+    mint.clear()
+    sec.clear()
+    tm_write.clear()

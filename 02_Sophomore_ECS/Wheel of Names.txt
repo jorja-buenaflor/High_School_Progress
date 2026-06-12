@@ -1,0 +1,148 @@
+import time
+import random
+speed(0)
+pu()
+shape("circle")
+name1=input("Enter name: ")
+name2=input("Enter name: ")
+name3=input("Enter name: ")
+name4=input("Enter name: ")
+
+def border():
+    pu()
+    goto(-7,7)
+    color("black")
+    pensize(12)
+    pd()
+    for i in range(4):
+        forward(200)
+        backward(200)
+        left(90)
+def b2():
+    pu()
+    goto(-200,-200)
+    pd()
+    pensize(12)
+    for i in range(4):
+        forward(400)
+        left(90)
+    pu()
+    goto(-7,7)
+
+def square(paint):
+    color("black")
+    tracer(0)
+    begin_fill()
+    for i in range(4):
+        forward(200)
+        right(90)
+    end_fill()
+    color(paint)
+    begin_fill()
+    for i in range(4):
+        forward(190)
+        right(90)
+    end_fill()
+    tracer(1)
+    
+goto(0,200)
+square("red")
+goto(-200,200)
+square("lime green")
+goto(-200,0)
+square("steel blue")
+goto(0,0)
+square("gold")
+border()
+b2()
+pensize(3)
+import turtle
+nme=turtle.Turtle()
+nme.penup()
+nme.speed(0)
+nme.color("antique white")
+nme.goto(20,100)
+nme.write(name1,font=("Verdana",25,"bold"))
+nme.color("pale green")
+nme.goto(-180,100)
+nme.write(name2,font=("Verdana",25,"bold"))
+nme.color("light cyan")
+nme.goto(-180,-100)
+nme.write(name3,font=("Verdana",25,"bold"))
+nme.color("light yellow")
+nme.goto(20,-100)
+nme.write(name4,font=("Verdana",25,"bold"))
+nme.goto(-300,300)
+start=input("Press ENTER to start...")
+
+def flash(number,seconds,stop):
+    for i in range(number):
+        goto(0,200)
+        square("light salmon")
+        time.sleep(seconds)
+        square("red")
+        if stop==1:
+            break
+        
+        goto(-200,200)
+        square("spring green")
+        time.sleep(seconds)
+        square("lime green")
+        if stop==2:
+            break
+        
+        goto(-200,0)
+        square("lightskyblue")
+        time.sleep(seconds)
+        square("steel blue")
+        if stop==3:
+            break
+        
+        goto(0,0)
+        square("yellow")
+        time.sleep(seconds)
+        square("gold")
+        if stop==4:
+            break
+        
+flash(2,0.07,0)
+flash(2,0.08,0)
+flash(2,0.09,0)
+flash(1,0.1,0)
+flash(1,0.2,0)
+flash(1,0.4,0)
+border()
+b2()
+pensize(3)
+winner=random.randint(1,4)
+if winner==1:
+    print(str(name1)+" is the winner!")
+    for i in range(30):
+        goto(0,200)
+        time.sleep(0.5)
+        square("orangered")
+        time.sleep(0.5)
+        square("brown")
+elif winner==2:
+    print(str(name2)+" is the winner!")
+    for i in range(30):
+        goto(-200,200)
+        time.sleep(0.5)
+        square("lime")
+        time.sleep(0.5)
+        square("forestgreen")
+elif winner==3:
+    print(str(name3)+" is the winner!")
+    for i in range(30):
+        goto(-200,0)
+        time.sleep(0.5)
+        square("deepskyblue")
+        time.sleep(0.5)
+        square("navy")
+else:
+    for i in range(30):
+        goto(0,0)
+        time.sleep(0.5)
+        square("yellow")
+        time.sleep(0.5)
+        square("gold")

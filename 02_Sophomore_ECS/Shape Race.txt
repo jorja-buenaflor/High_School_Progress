@@ -1,0 +1,178 @@
+import random
+speed(0)
+
+def makeRectangle(length,width,paint):
+    setheading(0)
+    color(paint)
+    begin_fill()
+    for i in range(2):
+        forward(width)
+        left(90)
+        forward(length)
+        left(90)
+    end_fill()
+    
+#background   
+penup()
+goto(140,-200)
+pendown()
+makeRectangle(400,20,"navy")
+penup()
+goto(160,-200)
+pendown()
+makeRectangle(400,20,"blue")
+penup()
+goto(180,-200)
+pendown()
+makeRectangle(400,20,'light blue')
+
+bgcolor("light gray")
+
+penup()
+goto(-130,150)
+color("white")
+write("Shape Race F3000",font=("Times New Roman",20,"italic","bold"))
+goto(-300,-300)
+#----------------------------------------------------------------
+#turtles
+import turtle
+you=turtle.Turtle()
+you.penup()
+you.color("red")
+you.shape("triangle")
+you.goto(-180,100)
+
+cpu=turtle.Turtle()
+cpu.penup()
+cpu.color("green")
+cpu.shape("square")
+cpu.goto(-180,-100)
+
+extra=turtle.Turtle()
+extra.penup()
+extra.color("yellow")
+extra.shape("circle")
+extra.goto(-180,0)
+#----------------------------------------------------------------
+#questions and move
+
+while you.xcor() <140 and cpu.xcor() <140 and extra.xcor()<140:
+    sign=random.randint(1,3)
+    if sign==2:
+        a=random.randint(1,12)
+        b=random.randint(1,12)
+        print("What is "+str(a)+" x "+str(b))
+        response=int(input())
+        
+        if response==a*b:
+            move=random.randint(20,40)
+            mov=random.randint(30,40)
+            m=random.randint(20,40)
+            you.forward(mov)
+            cpu.forward(move)
+            extra.forward(m)
+        elif response!=a*b:
+            print("The correct answer was "+str(a*b))
+            move=random.randint(20,60)
+            m=random.randint(20,60)
+            cpu.forward(move)
+            extra.forward(m)
+            
+    elif sign==3:
+        a=random.randint(1,15)
+        b=random.randint(1,15)
+        print("What is "+str(a)+" - "+str(b))
+        response=int(input())
+        
+        if response==a-b:
+            move=random.randint(20,40)
+            mov=random.randint(30,40)
+            m=random.randint(20,40)
+            you.forward(mov)
+            cpu.forward(move)
+            extra.forward(m)
+        elif response!=a-b:
+            print("The correct answer was "+str(a-b))
+            move=random.randint(20,60)
+            m=random.randint(20,60)
+            cpu.forward(move)
+            extra.forward(m)
+            
+    else:
+        a=random.randint(1,20)
+        b=random.randint(1,20)
+        print("What is "+str(a)+" + "+str(b))
+        response=int(input())
+        
+        if response==a+b:
+            move=random.randint(20,40)
+            mov=random.randint(30,40)
+            m=random.randint(20,40)
+            you.forward(mov)
+            cpu.forward(move)
+            extra.forward(m)
+        elif response!=a+b:
+            print("The correct answer was "+str(a+b))
+            move=random.randint(20,60)
+            m=random.randint(20,60)
+            cpu.forward(move)
+            extra.forward(m)
+            
+            
+            
+            
+color('black')
+if you.xcor()>cpu.xcor() and you.xcor()>extra.xcor():
+    goto(-130,20)
+    write("Triangle wins!",font=("Times New Roman",30,"bold"))
+elif extra.xcor()>cpu.xcor() and extra.xcor()>you.xcor():
+    goto(-100,20)
+    write("Circle wins!",font=("Times New Roman",30,"bold"))
+    
+else:
+    goto(-100,20)
+    write("Square wins!",font=("Times New Roman",30,"bold"))
+    
+choices=["crimson","navy","gold","alice blue"]
+
+def star(size):
+    begin_fill()
+    for i in range(5):
+        forward(size)
+        left(140)
+        forward(size)
+        right(68)
+    end_fill()
+
+for i in range(50):
+    clr=random.choice(choices)
+    size=random.randint(10,30)
+    x=random.randint(-200,200)
+    y=random.randint(-200,200)
+    angle=random.randint(1,360)
+    color(clr)
+    penup()
+    goto(x,y)
+    pendown()
+    right(angle)
+    star(size)
+
+
+penup()
+
+if you.xcor()>cpu.xcor() and you.xcor()>extra.xcor():
+    goto(-130,20)
+    color("red")
+    write("Triangle wins!",font=("Times New Roman",30,"bold"))
+elif extra.xcor()>cpu.xcor() and extra.xcor()>you.xcor():
+    goto(-100,20)
+    color("yellow")
+    write("Circle wins!",font=("Times New Roman",30,"bold"))
+    
+else:
+    goto(-100,20)
+    color("green")
+    write("Square wins!",font=("Times New Roman",30,"bold")) 
+    
+penup()
+goto(-300,-300)
